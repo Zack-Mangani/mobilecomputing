@@ -27,8 +27,14 @@
         <!-- Customize your theme here. -->
 
 
-
-
-
     </style>
+
+    <style name="Theme.MonitorIt.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.MonitorIt.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.MonitorIt.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
