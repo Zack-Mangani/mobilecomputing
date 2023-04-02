@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/athletes"
+    android:title="Athletes"
+    android:icon="@drawable/baseline_person_24"/>
+
+    <item android:id="@+id/stopwatch"
+        android:title="Stopwatch"
+        android:icon="@drawable/baseline_watch_24"/>#
+
+    <item android:id="@+id/fixtures"
+        android:title="Fixtures"
+        android:icon="@drawable/baseline_view_list_24"/>
+</menu>
