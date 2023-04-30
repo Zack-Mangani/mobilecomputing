@@ -10,30 +10,31 @@
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/blue"
         android:minHeight="?actionBarSize"
         android:theme="?actionBarTheme"
-        android:background="@color/blue">
+        tools:ignore="MissingConstraints">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="STOPWATCH"
-        android:textSize="35sp"
-        android:layout_gravity="center"
-        android:textColor="@color/white"
-        android:fontFamily="@font/racesport" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/racesport"
+            android:text="STOPWATCH"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
     </androidx.appcompat.widget.Toolbar>
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text=" 0 : 00 : 00"
-        android:fontFamily="@font/racesport"
-        android:textSize="70dp"
-        android:layout_marginTop="170dp"
         android:layout_gravity="center"
+        android:layout_marginTop="170dp"
+        android:fontFamily="@font/racesport"
+        android:text=" 0 : 00 : 00"
         android:textColor="@color/blue"
-        />
+        android:textSize="70dp" />
 
     <ImageView
         android:id="@+id/start"
@@ -42,9 +43,9 @@
         android:layout_margin="22dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/playicon"
+        android:clickable="true"
         android:contentDescription="Play button"
         android:onClick="onClickStart"
-        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -57,8 +58,8 @@
         android:layout_height="101dp"
         android:layout_margin="22dp"
         android:background="@drawable/pauseicon"
-        android:onClick="onClickStop"
         android:contentDescription="Stop button"
+        android:onClick="onClickStop"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
