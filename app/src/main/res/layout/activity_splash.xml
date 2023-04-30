@@ -19,32 +19,36 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="674dp"
-        android:fontFamily="@font/sportcenter"
+        android:layout_gravity="center"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="600dp"
+        android:fontFamily="@font/racesport"
         android:paddingBottom="16dp"
         android:text="Monitor It"
         android:textColor="#293241"
-        android:textSize="100dp" />
+        android:textSize="50sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="86dp"
         android:fontFamily="@font/racesport"
         android:text="Developed By:"
         android:textColor="#293241"
-        android:textSize="40sp" />
+        android:textSize="35sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="79dp"
+        android:layout_marginBottom="31dp"
         android:fontFamily="@font/racesport"
         android:text="Zack Mangani"
         android:textColor="#293241"

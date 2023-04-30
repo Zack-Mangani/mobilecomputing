@@ -26,7 +26,7 @@
         android:gravity="center_horizontal"
         android:text="Welcome Back!"
         android:textColor="#293241"
-        android:textSize="50dp"
+        android:textSize="50sp"
         android:textStyle="bold"
         android:padding="3dp"
         />
@@ -37,7 +37,7 @@
         android:gravity="center_horizontal"
         android:text="Sign-In"
         android:textColor="#293241"
-        android:textSize="40dp"
+        android:textSize="40sp"
         android:padding="4dp"
         />
     <EditText
@@ -47,7 +47,7 @@
         android:layout_gravity="center"
         android:id="@+id/username1"
         android:hint="Username"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textColorHint="#293241"
         android:drawableLeft="@drawable/baseline_person_outline_24"
         android:background="@drawable/edittextbackground"
@@ -62,7 +62,7 @@
         android:layout_gravity="center"
         android:id="@+id/password1"
         android:hint="Password"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textColorHint="#293241"
         android:drawableStart="@drawable/baseline_password_24"
         android:background="@drawable/edittextbackground"
@@ -77,7 +77,7 @@
         android:id="@+id/login"
         android:text="Login"
         android:backgroundTint="#293241"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:radius="15dp"
         android:fontFamily="@font/racesport"
         android:layout_gravity="center"
@@ -87,14 +87,14 @@
     <TextView
         android:id="@+id/text_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:textColor="#293241"
-        android:text="Do not have an account"
-        android:textSize="20dp"
-        android:fontFamily="@font/racesport"
+        android:layout_height="35dp"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="30dp"
+        android:clickable="true"
+        android:fontFamily="@font/racesport"
+        android:text="Do not have an account"
+        android:textColor="#293241"
+        android:textSize="20sp" />
 
 
 

@@ -7,14 +7,31 @@
     tools:context=".StopwatchFragment">
 
     <!-- TODO: Update blank fragment layout -->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?actionBarSize"
+        android:theme="?actionBarTheme"
+        android:background="@color/blue">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STOPWATCH"
+        android:textSize="35sp"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/racesport" />
+    </androidx.appcompat.widget.Toolbar>
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="0 : 00 : 00"
+        android:text=" 0 : 00 : 00"
         android:fontFamily="@font/racesport"
         android:textSize="70dp"
+        android:layout_marginTop="170dp"
+        android:layout_gravity="center"
         android:textColor="@color/blue"
         />
 

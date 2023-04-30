@@ -11,6 +11,7 @@ public class Note {
     private Date deleted;
 
     public static ArrayList<Note> noteArrayList = new ArrayList<>();
+    public static String NOTE_EDIT_EXTRA ="noteEdit";
     public Note(int id, String title, String description, Date deleted) {
         this.id = id;
         this.title = title;
@@ -24,6 +25,26 @@ public class Note {
         this.description = description;
         deleted = null;
     }
+
+    public static Note getNoteForID(int passedNoteID) {
+        for(Note note: noteArrayList) {
+            if(note.getId() == passedNoteID){
+                return note;
+            }
+
+        }
+        return null;
+    }
+
+    public static ArrayList<Note> nonDeletedNote() {
+        ArrayList<Note> nonDeleted = new ArrayList<>();
+        for (Note note : noteArrayList) {
+            if (note.getDeleted() == null) {
+                nonDeleted.add(note);
+            }
+        }
+        return nonDeleted;
+     }
 
     public int getId() {
         return id;

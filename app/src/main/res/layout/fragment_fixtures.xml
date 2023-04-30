@@ -6,6 +6,24 @@
     tools:context=".FixturesFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?actionBarSize"
+        android:theme="?actionBarTheme"
+        android:background="@color/blue">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fixtures"
+            android:textSize="35sp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/racesport" />
+    </androidx.appcompat.widget.Toolbar>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
