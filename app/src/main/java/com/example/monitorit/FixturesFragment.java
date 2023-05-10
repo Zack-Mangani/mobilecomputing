@@ -53,7 +53,7 @@ public class FixturesFragment extends Fragment {
 
 
                     FixtureResponse[] fixtures = response.body().results;
-                    System.out.println("hello");
+                    //System.out.println("hello");
                     for (FixtureResponse fixture : fixtures) {
 
                         //String content = fixture.getStrHomeTeam();
