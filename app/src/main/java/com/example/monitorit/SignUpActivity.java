@@ -39,22 +39,26 @@ public class SignUpActivity extends AppCompatActivity {
                 String repass = repassword.getText().toString();
 
                 if (TextUtils.isEmpty(user) || TextUtils.isEmpty(pass) || TextUtils.isEmpty(repass)) {
+                    // Check if any field is empty
                     Toast.makeText(SignUpActivity.this, "All fields are required", Toast.LENGTH_SHORT).show();
 
                 }else{
                         if (pass.equals(repass)) {
+                            // Check if passwords match
                             Boolean checkuser = DB.CheckUsername(user);
                             if (checkuser == false) {
+                                // Check if username is available
                                 Boolean insert = DB.insertData(user, pass);
                                 if (insert == true) {
-                                    Toast.makeText(SignUpActivity.this, "Regisitered Successfully!", Toast.LENGTH_SHORT).show();
+                                    // Insert the user's data into the database
+                                    Toast.makeText(SignUpActivity.this, "Registered Successfully!", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                                     startActivity(intent);
                                 } else {
-                                    Toast.makeText(SignUpActivity.this, "Regisitered Failed!", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(SignUpActivity.this, "Registered Failed!", Toast.LENGTH_SHORT).show();
                                 }
                             } else {
-                                Toast.makeText(SignUpActivity.this, "User Arleady Exists!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SignUpActivity.this, "User Already Exists!", Toast.LENGTH_SHORT).show();
                             }
 
                         } else {

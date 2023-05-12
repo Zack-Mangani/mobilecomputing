@@ -17,11 +17,13 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-       db.execSQL("create table users(username TEXT primary key, password TEXT)");
+        // Create the 'users' table with 'username' and 'password' columns
+        db.execSQL("create table users(username TEXT primary key, password TEXT)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        // Drop the 'users' table if it exists during an upgrade
         db.execSQL("drop table if exists users");
     }
 
@@ -33,11 +35,12 @@ public class DBHelper extends SQLiteOpenHelper {
         values.put("username", username);
         values.put("password", password);
 
+        // Insert the username and password into the 'users' table
         long result= db.insert("users", null,values);
         if(result==-1) {
-            return false;
+            return false; // Insert failed
         } else {
-            return true;
+            return true; // Insert successful
         }
 
     }
@@ -47,10 +50,11 @@ public class DBHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
         Cursor cursor = db.rawQuery("select * from users where username=?", new String[] {username});
 
+        // Check if the username exists in the 'users' table
         if(cursor.getCount()>0) {
-            return true;
+            return true; // Username found
         }else {
-            return false;
+            return false; // Username not found
         }
     }
 
@@ -58,10 +62,11 @@ public class DBHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
         Cursor cursor = db.rawQuery("select * from users where username=? and password=?", new String[] {username, password});
 
+        // Check if the username and password combination exists in the 'users' table
         if(cursor.getCount()>0) {
-            return true;
+            return true; // Username and password combination found
         }else {
-            return false;
+            return false; // Username and password combination not found
         }
     }
 

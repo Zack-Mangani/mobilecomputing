@@ -14,8 +14,10 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        // Set the activity to fullscreen
     getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+    // Create a delay using a Handler to navigate to the next activity after a certain time
     new Handler().postDelayed(new Runnable() {
         @Override
         public void run() {
@@ -23,7 +25,8 @@ public class SplashActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
         }
-    }, 4000);
+    }, 4000); // Delay for 4 seconds (4000 milliseconds)
+
 
 
     }

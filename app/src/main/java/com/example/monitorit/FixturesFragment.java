@@ -36,32 +36,36 @@ public class FixturesFragment extends Fragment {
 
         //textViewResult = findViewById(R.id.text_view_result);
 
-
+        // Initialize Retrofit instance
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://www.thesportsdb.com")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
+        // Create an instance of the API interface
         JsonPlaceHolderApi jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
-
+        // Make the API call
         Call<ApiResponse> call = jsonPlaceHolderApi.getFixtureResponses();
 
+        // Asynchronously handle the API response
         call.enqueue(new Callback<ApiResponse>() {
             @Override
             public void onResponse(Call<ApiResponse> call, Response<ApiResponse> response) {
                 if (response.isSuccessful()) {
-
+                    // Extract fixture data from the response
 
                     FixtureResponse[] fixtures = response.body().results;
                     //System.out.println("hello");
                     for (FixtureResponse fixture : fixtures) {
 
                         //String content = fixture.getStrHomeTeam();
+                        // Format and display fixture details
                         String content = fixture.getDateEvent() + " : " + fixture.getStrHomeTeam() + " vs " + fixture.getStrAwayTeam() + "\n";
                         content += fixture.getIntHomeScore() + " - " + fixture.getIntAwayScore() + "\n\n";
                         textViewResult.append(content);
                     }
                 } else{
+                    // Handle unsuccessful response
                     textViewResult.setText("Error: " + response.code());
                 }
             }
@@ -69,6 +73,7 @@ public class FixturesFragment extends Fragment {
 
             @Override
             public void onFailure(Call<ApiResponse> call, Throwable t) {
+                // Handle API call failure
                 textViewResult.setText("Error: " + t.getMessage());
             }
 

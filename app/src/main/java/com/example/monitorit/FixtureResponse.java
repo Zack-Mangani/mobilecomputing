@@ -4,13 +4,14 @@ import java.util.Date;
 
 public class FixtureResponse {
 
-    private String strHomeTeam;
-    private String strAwayTeam;
-    private Date dateEvent;
+    private String strHomeTeam; // Represents the name of the home team
+    private String strAwayTeam; // Represents the name of the away team
+    private Date dateEvent; // Represents the date of the event
 
-    private int intAwayScore;
-    private int intHomeScore;
-    //
+    private int intAwayScore; // Represents the score of the away team
+    private int intHomeScore; // Represents the score of the home team
+
+    // Getter methods for accessing private member variables
     public String getStrHomeTeam() {
         return strHomeTeam;
     }

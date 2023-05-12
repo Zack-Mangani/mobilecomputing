@@ -29,9 +29,11 @@ private Note selectedNote;
         selectedNote = Note.getNoteForID(passedNoteID);
 
         if(selectedNote != null) {
+            // If editing an existing note, populate the EditText fields with note details
             titleEdittext.setText(selectedNote.getTitle());
             descEditText.setText(selectedNote.getDescription());
         } else {
+            // If creating a new note, hide the delete button
             deleteButton.setVisibility(View.INVISIBLE);
         }
     }
@@ -47,23 +49,26 @@ private Note selectedNote;
 
     public void SaveNote(View view) {
 
-
+        // Get the title and description from the EditText fields
         String title = String.valueOf(titleEdittext.getText());
         String desc = String.valueOf(descEditText.getText());
 
         if(selectedNote == null) {
+            // Creating a new note
             int id = Note.noteArrayList.size();
             Note newNote = new Note(id, title, desc);
             Note.noteArrayList.add(newNote);
         } else {
+            // Editing an existing note
             selectedNote.setTitle(title);
             selectedNote.setDescription(desc);
         }
-        finish();
+        finish(); // Finish the activity and return to the previous screen
     }
 
     public void DeleteNote(View view) {
+        // Set the deleted date of the selected note
         selectedNote.setDeleted(new Date());
-        finish();
+        finish(); // Finish the activity and return to the previous screen
     }
 }

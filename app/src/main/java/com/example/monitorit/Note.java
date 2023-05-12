@@ -10,7 +10,11 @@ public class Note {
     private String description;
     private Date deleted;
 
+
+    // ArrayList to store all the notes
     public static ArrayList<Note> noteArrayList = new ArrayList<>();
+
+    // Extra key for passing note data when editing
     public static String NOTE_EDIT_EXTRA ="noteEdit";
     public Note(int id, String title, String description, Date deleted) {
         this.id = id;
@@ -26,6 +30,7 @@ public class Note {
         deleted = null;
     }
 
+    // Method to get a note for a given athlete note ID
     public static Note getNoteForID(int passedNoteID) {
         for(Note note: noteArrayList) {
             if(note.getId() == passedNoteID){
@@ -35,7 +40,7 @@ public class Note {
         }
         return null;
     }
-
+    // Method to get a list of non-deleted athlete's notes
     public static ArrayList<Note> nonDeletedNote() {
         ArrayList<Note> nonDeleted = new ArrayList<>();
         for (Note note : noteArrayList) {
@@ -46,6 +51,7 @@ public class Note {
         return nonDeleted;
      }
 
+    // Getter and setter methods
     public int getId() {
         return id;
     }

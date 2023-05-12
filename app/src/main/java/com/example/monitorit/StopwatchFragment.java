@@ -37,10 +37,13 @@ public class StopwatchFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_stopwatch, container, false);
 
+        // Initialize views
         mTextView = view.findViewById(R.id.textView);
         mStartImage = view.findViewById(R.id.start);
         mPauseImage = view.findViewById(R.id.pause);
         mResetImage = view.findViewById(R.id.reset);
+
+        // Set click listeners for start, pause, and reset buttons
 
         mStartImage.setOnClickListener(new View.OnClickListener() {
             @Override

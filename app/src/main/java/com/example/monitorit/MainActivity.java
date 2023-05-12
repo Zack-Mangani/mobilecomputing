@@ -23,7 +23,9 @@ public class  MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        // Set the initial fragment to display (e.g., AthletesFragment)
         replaceFragment(new AthletesFragment());
+        // Set listener for bottom navigation view item selection
         binding.bottomNavigation.setOnItemSelectedListener(item -> {
 
             switch (item.getItemId()) {
@@ -44,7 +46,7 @@ public class  MainActivity extends AppCompatActivity {
         });
 
     }
-
+    // Replaces the current fragment with the provided fragment
     private void replaceFragment(Fragment fragment) {
 
         FragmentManager fragmentManager = getSupportFragmentManager();
