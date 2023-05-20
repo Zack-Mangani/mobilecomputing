@@ -28,7 +28,7 @@
         android:paddingBottom="16dp"
         android:text="Monitor It"
         android:textColor="#293241"
-        android:textSize="50sp" />
+        android:textSize="50dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -40,7 +40,7 @@
         android:fontFamily="@font/racesport"
         android:text="Developed By:"
         android:textColor="#293241"
-        android:textSize="35sp" />
+        android:textSize="35dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -52,6 +52,6 @@
         android:fontFamily="@font/racesport"
         android:text="Zack Mangani"
         android:textColor="#293241"
-        android:textSize="25sp" />
+        android:textSize="25dp" />
 
 </RelativeLayout>
